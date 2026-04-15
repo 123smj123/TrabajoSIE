@@ -20,6 +20,12 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="admin">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="director">
@@ -36,7 +42,7 @@
     </role>
   </roles>
   <groups>
-    <group name="direccion">
+    <group name="direccion" parentPath="/direccion">
       <displayName>Dirección</displayName>
       <description>Grupo con los integrantes de la dirección de la empresa</description>
     </group>
@@ -44,26 +50,46 @@
       <displayName>Trabajadores</displayName>
       <description>Grupo con los trabajadores de la empresa</description>
     </group>
+    <group name="Clientes">
+      <displayName>Clientes</displayName>
+    </group>
+    <group name="administracion" parentPath="/trabajadores">
+      <displayName>Administración</displayName>
+    </group>
+    <group name="trabajador_planta" parentPath="/trabajadores">
+      <displayName>Trabajador Planta</displayName>
+    </group>
+    <group name="vip" parentPath="/Clientes">
+      <displayName>VIP</displayName>
+    </group>
   </groups>
   <memberships>
     <membership>
+      <userName>paquito</userName>
+      <roleName>trabajador</roleName>
+      <groupName>trabajadores</groupName>
+    </membership>
+    <membership>
       <userName>papaDeOnesimo</userName>
       <roleName>director</roleName>
-      <groupName>direccion</groupName>
+      <groupName>administracion</groupName>
+      <groupParentPath>/trabajadores</groupParentPath>
     </membership>
     <membership>
       <userName>papaDeOnesimo</userName>
       <roleName>trabajador</roleName>
-      <groupName>trabajadores</groupName>
+      <groupName>trabajador_planta</groupName>
+      <groupParentPath>/trabajadores</groupParentPath>
     </membership>
     <membership>
       <userName>papaDeOnesimo</userName>
       <roleName>repartidor</roleName>
-      <groupName>trabajadores</groupName>
+      <groupName>trabajador_planta</groupName>
+      <groupParentPath>/trabajadores</groupParentPath>
     </membership>
     <membership>
-      <userName>paquito</userName>
-      <roleName>trabajador</roleName>
+      <userName>admin</userName>
+      <roleName>director</roleName>
       <groupName>trabajadores</groupName>
     </membership>
   </memberships>
