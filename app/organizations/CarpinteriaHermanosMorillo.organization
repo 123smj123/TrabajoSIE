@@ -1,8 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="CarpinteriaHermanosMorillo" description="Empresa dedicada a la carpintería con la que vamos a trabajar en este proyecto">
   <customUserInfoDefinitions/>
-  <users/>
-  <roles/>
-  <groups/>
-  <memberships/>
+  <users>
+    <user userName="papaDeOnesimo">
+      <firstName>Onésimo</firstName>
+      <lastName>Morillo</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="paquito">
+      <firstName>Paquito</firstName>
+      <lastName>Trabajador</lastName>
+      <manager>papaDeOnesimo</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="director">
+      <displayName>Director</displayName>
+      <description>Director de la empresa</description>
+    </role>
+    <role name="trabajador">
+      <displayName>Trabajador</displayName>
+      <description>Trabajador del taller</description>
+    </role>
+    <role name="repartidor">
+      <displayName>Repartidor</displayName>
+      <description>Encargado de repartir los productos a los clientes</description>
+    </role>
+  </roles>
+  <groups>
+    <group name="direccion">
+      <displayName>Dirección</displayName>
+      <description>Grupo con los integrantes de la dirección de la empresa</description>
+    </group>
+    <group name="trabajadores">
+      <displayName>Trabajadores</displayName>
+      <description>Grupo con los trabajadores de la empresa</description>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>papaDeOnesimo</userName>
+      <roleName>director</roleName>
+      <groupName>direccion</groupName>
+    </membership>
+    <membership>
+      <userName>papaDeOnesimo</userName>
+      <roleName>trabajador</roleName>
+      <groupName>trabajadores</groupName>
+    </membership>
+    <membership>
+      <userName>papaDeOnesimo</userName>
+      <roleName>repartidor</roleName>
+      <groupName>trabajadores</groupName>
+    </membership>
+    <membership>
+      <userName>paquito</userName>
+      <roleName>trabajador</roleName>
+      <groupName>trabajadores</groupName>
+    </membership>
+  </memberships>
 </organization:Organization>
