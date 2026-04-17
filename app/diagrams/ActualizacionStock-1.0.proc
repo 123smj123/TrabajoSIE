@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_8ghdkDj6EfGzUf6kVrc-jw" name="ActualizacionStock" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_8ghdkTj6EfGzUf6kVrc-jw" name="actualizarStock" displayName="Actualizar Stock">
       <elements xmi:type="process:Lane" xmi:id="_8ghdkjj6EfGzUf6kVrc-jw" name="Employee lane" actor="_8glvFTj6EfGzUf6kVrc-jw">
@@ -43,6 +43,67 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_orgsYTo2EfG1V_iUThqUCw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_orgsYDo2EfG1V_iUThqUCw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_orgsYjo2EfG1V_iUThqUCw" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_fcy9QDo6EfG1V_iUThqUCw" documentation="Notifica al grupo de administracion en caso de que el stock esté por debajo del mínimo requerido" name="notificaAdministracion" definitionId="email" event="ON_ENTER" definitionVersion="1.2.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_fcy9QTo6EfG1V_iUThqUCw" definitionId="email" version="1.2.0" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9Qjo6EfG1V_iUThqUCw" key="smtpHost">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9Qzo6EfG1V_iUThqUCw" name="localhost" content="localhost" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9RDo6EfG1V_iUThqUCw" key="smtpPort">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9RTo6EfG1V_iUThqUCw" name="2525" content="2525" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9Rjo6EfG1V_iUThqUCw" key="sslSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9Rzo6EfG1V_iUThqUCw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9SDo6EfG1V_iUThqUCw" key="starttlsSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9STo6EfG1V_iUThqUCw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9Sjo6EfG1V_iUThqUCw" key="trustCertificate">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9Szo6EfG1V_iUThqUCw" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9TDo6EfG1V_iUThqUCw" key="userName">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9TTo6EfG1V_iUThqUCw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9Tjo6EfG1V_iUThqUCw" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9Tzo6EfG1V_iUThqUCw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9UDo6EfG1V_iUThqUCw" key="from">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9UTo6EfG1V_iUThqUCw" name="automatizacion@morillo.com" content="automatizacion@morillo.com" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9Ujo6EfG1V_iUThqUCw" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9Uzo6EfG1V_iUThqUCw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9VDo6EfG1V_iUThqUCw" key="to">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9VTo6EfG1V_iUThqUCw" name="administracion@morillo.com" content="administracion@morillo.com" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9Vjo6EfG1V_iUThqUCw" key="bcc">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9Vzo6EfG1V_iUThqUCw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9WDo6EfG1V_iUThqUCw" key="cc">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9WTo6EfG1V_iUThqUCw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9Wjo6EfG1V_iUThqUCw" key="subject">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9Wzo6EfG1V_iUThqUCw" name="Bajo stock" content="Bajo stock" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9XDo6EfG1V_iUThqUCw" key="html">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9XTo6EfG1V_iUThqUCw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9Xjo6EfG1V_iUThqUCw" key="message">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9Xzo6EfG1V_iUThqUCw" name="&lt;pattern-expression>" content="&lt;p>El stock de el material X est&amp;aacute; bajo&lt;/p>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9YDo6EfG1V_iUThqUCw" key="headers">
+                <expression xmi:type="expression:TableExpression" xmi:id="_fcy9YTo6EfG1V_iUThqUCw"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9Yjo6EfG1V_iUThqUCw" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9Yzo6EfG1V_iUThqUCw" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9ZDo6EfG1V_iUThqUCw" key="replyTo">
+                <expression xmi:type="expression:Expression" xmi:id="_fcy9ZTo6EfG1V_iUThqUCw" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_fcy9Zjo6EfG1V_iUThqUCw" key="attachments">
+                <expression xmi:type="expression:ListExpression" xmi:id="_fcy9Zzo6EfG1V_iUThqUCw"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_orgsYzo2EfG1V_iUThqUCw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_orgsZDo2EfG1V_iUThqUCw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_orgsZTo2EfG1V_iUThqUCw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -78,7 +139,9 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_x_gK0Do3EfG1V_iUThqUCw" name="Stock insuficiente" target="_vhJugDo2EfG1V_iUThqUCw" source="_MXdA4Do2EfG1V_iUThqUCw">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_x_gx4Do3EfG1V_iUThqUCw"/>
-        <condition xmi:type="expression:Expression" xmi:id="_x_gx4To3EfG1V_iUThqUCw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_x_gx4To3EfG1V_iUThqUCw" name="comprobarStock()" content="if(stockVar.getCantidadActual() &lt; stockVar.getCantidadMinima())&#xD;&#xA;&#x9;return true;&#xD;&#xA;else&#xD;&#xA;&#x9;return false;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_uPcusDo5EfG1V_iUThqUCw" name="stockVar" dataType="_8gnkPjj6EfGzUf6kVrc-jw" className="com.company.model.Stock"/>
+        </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_z5qxcDo3EfG1V_iUThqUCw" name="Stock correcto" target="_l5bmUDo2EfG1V_iUThqUCw" source="_MXdA4Do2EfG1V_iUThqUCw" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_z5qxcTo3EfG1V_iUThqUCw"/>
