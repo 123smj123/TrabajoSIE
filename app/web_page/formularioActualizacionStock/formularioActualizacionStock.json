@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "1aca8c9d-6351-4cc1-92ad-5f0fa287b166",
   "modelVersion" : "2.4",
-  "lastUpdate" : 1776937185465,
+  "lastUpdate" : 1776946874158,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -78,10 +78,8 @@
                     "value" : "Seleccionar material utilizado"
                   },
                   "availableValues" : {
-                    "type" : "constant",
-                    "value" : [
-                      "listaMateriales"
-                    ]
+                    "type" : "expression",
+                    "value" : "listaMateriales"
                   },
                   "displayedKey" : {
                     "type" : "constant",
@@ -239,7 +237,7 @@
                     "value" : "left"
                   }
                 },
-                "reference" : "c8671708-4ab4-42b0-89ed-489849434a73",
+                "reference" : "5e9b7b97-f5bb-43ed-b4e5-9c7c3fb7941c",
                 "hasValidationError" : false,
                 "id" : "pbText"
               }
@@ -409,7 +407,7 @@
       "value" : [
         "{\r",
         "  \"materialId\" : null,\r",
-        "  \"cantiadaUtilizada\" : 0\r",
+        "  \"cantidadUtilizada\" : 0\r",
         "}"
       ],
       "exposed" : false
@@ -434,7 +432,7 @@
       "value" : [
         "return {",
         "\tmaterialId: $data.formInput.materialId,",
-        "\tcantiadaUtilizada: $data.formInput.cantiadaUtilizada",
+        "\tcantidadUtilizada: $data.formInput.cantidadUtilizada",
         "}"
       ],
       "exposed" : false

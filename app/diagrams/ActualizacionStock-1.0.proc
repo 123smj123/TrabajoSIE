@@ -16,8 +16,9 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_SRzU4To1EfG1V_iUThqUCw" name="stockVar" content="stockVar" type="TYPE_VARIABLE" returnType="com.company.model.Stock">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Yu57MDo1EfG1V_iUThqUCw" name="stockVar" dataType="_8gnkPjj6EfGzUf6kVrc-jw" className="com.company.model.Stock"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_SRzU4jo1EfG1V_iUThqUCw" name="actualizaStock()" content="def material = stockDAO.findByPersistenceId(materialId.toLong());&#xD;&#xA;&#xD;&#xA;def nuevoStock = material.cantidadActual - cantidadUtilizada;&#xD;&#xA;&#xD;&#xA;material.setCantidadActual(nuevoStock);&#xD;&#xA;&#xD;&#xA;return material;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Stock">
-              <referencedElements xmi:type="expression:Expression" xmi:id="_GdwpoDo2EfG1V_iUThqUCw" name="stockDAO" content="stockDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.StockDAO" returnTypeFixed="true"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_SRzU4jo1EfG1V_iUThqUCw" name="actualizaStock()" content="def material = stockDAO.findByPersistenceId(Long.parseLong(materialUsado));&#xD;&#xA;def nuevoStock = material.cantidadActual - cantidadUsada;&#xD;&#xA;material.setCantidadActual(nuevoStock);&#xD;&#xA;return stockDAO.save(material);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Stock">
+              <referencedElements xmi:type="expression:Expression" xmi:id="_SuRLQD8TEfG8DOkJ27W95A" name="stockDAO" content="stockDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.StockDAO" returnTypeFixed="true"/>
+              <referencedElements xmi:type="process:Data" xmi:id="_SuRLQT8TEfG8DOkJ27W95A" name="materialUsado" dataType="_8gnkOzj6EfGzUf6kVrc-jw"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_SRzU4zo1EfG1V_iUThqUCw" type="ASSIGNMENT"/>
           </operations>
@@ -134,6 +135,20 @@
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_8BFWwDoyEfG1V_iUThqUCw" name="stockVar" dataType="_8gnkPjj6EfGzUf6kVrc-jw" className="com.company.model.Stock">
         <defaultValue xmi:type="expression:Expression" xmi:id="_8BFWwToyEfG1V_iUThqUCw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_ZoUeMD8REfG8DOkJ27W95A" name="materialUsado" dataType="_8gnkOzj6EfGzUf6kVrc-jw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_ZoUeMT8REfG8DOkJ27W95A" name="materialId" content="materialId" type="TYPE_CONTRACT_INPUT">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_2A1y8D8REfG8DOkJ27W95A" name="materialId">
+            <mapping xmi:type="process:ContractInputMapping" xmi:id="_2A1y8T8REfG8DOkJ27W95A"/>
+          </referencedElements>
+        </defaultValue>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_bV6BYD8REfG8DOkJ27W95A" name="cantidadUsada" dataType="_8gnkODj6EfGzUf6kVrc-jw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_bV6BYT8REfG8DOkJ27W95A" name="cantidadUtilizada" content="cantidadUtilizada" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Integer">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_00U8gD8REfG8DOkJ27W95A" name="cantidadUtilizada" type="INTEGER">
+            <mapping xmi:type="process:ContractInputMapping" xmi:id="_00U8gT8REfG8DOkJ27W95A"/>
+          </referencedElements>
+        </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_8glvDjj6EfGzUf6kVrc-jw">
         <targetForm xmi:type="expression:Expression" xmi:id="_zLMesDozEfG1V_iUThqUCw" name="formularioActualizacionStock" content="1aca8c9d-6351-4cc1-92ad-5f0fa287b166" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -258,7 +273,7 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_d1cekjoyEfG1V_iUThqUCw" fontName="Segoe UI"/>
           <styles xmi:type="notation:LineStyle" xmi:id="_d1cekzoyEfG1V_iUThqUCw"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_d1celzoyEfG1V_iUThqUCw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d1celDoyEfG1V_iUThqUCw" x="47" y="145"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d1celDoyEfG1V_iUThqUCw" x="48" y="180" width="777" height="152"/>
         </children>
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_8gpZbjj6EfGzUf6kVrc-jw"/>
