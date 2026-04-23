@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "1aca8c9d-6351-4cc1-92ad-5f0fa287b166",
   "modelVersion" : "2.4",
-  "lastUpdate" : 1776414056912,
+  "lastUpdate" : 1776937185465,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -85,11 +85,11 @@
                   },
                   "displayedKey" : {
                     "type" : "constant",
-                    "value" : "item.nombre"
+                    "value" : "nombre"
                   },
                   "returnedKey" : {
                     "type" : "constant",
-                    "value" : "item"
+                    "value" : "persistenceId_string"
                   },
                   "value" : {
                     "type" : "variable",
@@ -190,6 +190,58 @@
                 "hasValidationError" : false,
                 "id" : "pbInput",
                 "description" : ""
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Default label"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "{{listaMateriales}}"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "c8671708-4ab4-42b0-89ed-489849434a73",
+                "hasValidationError" : false,
+                "id" : "pbText"
               }
             ],
             [
@@ -356,7 +408,7 @@
       "type" : "json",
       "value" : [
         "{\r",
-        "  \"materialId\" : \"\",\r",
+        "  \"materialId\" : null,\r",
         "  \"cantiadaUtilizada\" : 0\r",
         "}"
       ],
@@ -390,7 +442,7 @@
     "listaMateriales" : {
       "type" : "url",
       "value" : [
-        "../API/bdm/businessData/com.company.model.Stock?q=find&p=0"
+        "../API/bdm/businessData/com.company.model.Stock?q=find&p=0&c=100"
       ],
       "exposed" : false
     }
