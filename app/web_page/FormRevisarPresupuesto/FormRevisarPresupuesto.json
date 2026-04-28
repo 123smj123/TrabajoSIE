@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "ac323979-0087-48f2-ace1-24580a5b2632",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1777369178783,
+  "lastUpdate" : 1777402011300,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -416,18 +416,16 @@
             "value" : false
           },
           "availableValues" : {
-            "type" : "constant",
-            "value" : [
-              "true",
-              "false"
-            ]
+            "type" : "expression",
+            "value" : "values"
           },
           "displayedKey" : {
             "type" : "constant",
-            "value" : "[\"Aprobar\", \"Rechazar\"]"
+            "value" : "label"
           },
           "returnedKey" : {
-            "type" : "constant"
+            "type" : "constant",
+            "value" : "value"
           },
           "selectedValue" : {
             "type" : "variable",
@@ -640,6 +638,23 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "expression",
+      "value" : [
+        "{\"aprobado\": false}"
+      ],
+      "exposed" : false
+    },
+    "values" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "  { \"label\": \"Aprobar\", \"value\": true },\r",
+        "  { \"label\": \"Rechazar\", \"value\": false }\r",
+        "]"
       ],
       "exposed" : false
     }
