@@ -3,8 +3,9 @@
   "name" : "formularioNuevoStock",
   "type" : "form",
   "uuid" : "a9b00234-ba4d-4e9f-9483-05ede2ad52c1",
-  "modelVersion" : "2.4",
-  "lastUpdate" : 1776932777623,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.4",
+  "lastUpdate" : 1777366156818,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [

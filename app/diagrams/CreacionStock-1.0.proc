@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_KTpPgD7rEfGu4u7zxEocYA" name="CreacionStock" bonitaModelVersion="7.12.0-004">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
+  <process:MainProcess xmi:id="_KTpPgD7rEfGu4u7zxEocYA" name="CreacionStock" bonitaModelVersion="8">
     <elements xmi:type="process:Pool" xmi:id="_KTpPgT7rEfGu4u7zxEocYA" name="crearStock" displayName="Crear Stock">
       <elements xmi:type="process:Lane" xmi:id="_KTpPgj7rEfGu4u7zxEocYA" name="Employee lane">
         <elements xmi:type="process:StartEvent" xmi:id="_KTpPgz7rEfGu4u7zxEocYA" name="Start1" outgoing="_yi2o9D7sEfGu4u7zxEocYA">
@@ -70,19 +70,19 @@
   </process:MainProcess>
   <notation:Diagram xmi:id="_KTqdyj7rEfGu4u7zxEocYA" type="Process" element="_KTpPgD7rEfGu4u7zxEocYA" name="MyDiagram" measurementUnit="Pixel">
     <children xmi:type="notation:Node" xmi:id="_KTqdyz7rEfGu4u7zxEocYA" type="2007" element="_KTpPgT7rEfGu4u7zxEocYA">
-      <children xmi:type="notation:DecorationNode" xmi:id="_KTqdzD7rEfGu4u7zxEocYA" type="5008"/>
-      <children xmi:type="notation:DecorationNode" xmi:id="_KTqdzT7rEfGu4u7zxEocYA" type="7001">
+      <children xmi:type="notation:DecorationNode" xmi:id="_KTqdzD7rEfGu4u7zxEocYA" type="5008" element="_KTpPgT7rEfGu4u7zxEocYA"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_KTqdzT7rEfGu4u7zxEocYA" type="7001" element="_KTpPgT7rEfGu4u7zxEocYA">
         <children xmi:type="notation:Node" xmi:id="_KTqdzj7rEfGu4u7zxEocYA" type="3007" element="_KTpPgj7rEfGu4u7zxEocYA">
-          <children xmi:type="notation:DecorationNode" xmi:id="_KTqdzz7rEfGu4u7zxEocYA" type="5007"/>
-          <children xmi:type="notation:DecorationNode" xmi:id="_KTqd0D7rEfGu4u7zxEocYA" type="7002">
+          <children xmi:type="notation:DecorationNode" xmi:id="_KTqdzz7rEfGu4u7zxEocYA" type="5007" element="_KTpPgj7rEfGu4u7zxEocYA"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_KTqd0D7rEfGu4u7zxEocYA" type="7002" element="_KTpPgj7rEfGu4u7zxEocYA">
             <children xmi:type="notation:Shape" xmi:id="_KTqd1D7rEfGu4u7zxEocYA" type="3002" element="_KTpPgz7rEfGu4u7zxEocYA" fontName="Segoe UI">
-              <children xmi:type="notation:DecorationNode" xmi:id="_KTqd1T7rEfGu4u7zxEocYA" type="5024">
+              <children xmi:type="notation:DecorationNode" xmi:id="_KTqd1T7rEfGu4u7zxEocYA" type="5024" element="_KTpPgz7rEfGu4u7zxEocYA">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_KTqd1j7rEfGu4u7zxEocYA" y="5"/>
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KTqd1z7rEfGu4u7zxEocYA" x="60" y="68"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_yi2o8D7sEfGu4u7zxEocYA" type="3003" element="_yiy-kD7sEfGu4u7zxEocYA" fontName="Segoe UI">
-              <children xmi:type="notation:DecorationNode" xmi:id="_yi2o8j7sEfGu4u7zxEocYA" type="5025">
+              <children xmi:type="notation:DecorationNode" xmi:id="_yi2o8j7sEfGu4u7zxEocYA" type="5025" element="_yiy-kD7sEfGu4u7zxEocYA">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_yi2o8z7sEfGu4u7zxEocYA" y="5"/>
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yi2o8T7sEfGu4u7zxEocYA" x="316" y="67"/>
@@ -103,7 +103,7 @@
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_KTwkQT7rEfGu4u7zxEocYA"/>
     <edges xmi:type="notation:Connector" xmi:id="_ylXKYD7sEfGu4u7zxEocYA" type="4001" element="_yi2o9D7sEfGu4u7zxEocYA" source="_KTqd1D7rEfGu4u7zxEocYA" target="_yi2o8D7sEfGu4u7zxEocYA" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_ylXKYz7sEfGu4u7zxEocYA" type="6001">
+      <children xmi:type="notation:DecorationNode" xmi:id="_ylXKYz7sEfGu4u7zxEocYA" type="6001" element="_yi2o9D7sEfGu4u7zxEocYA">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ylXKZD7sEfGu4u7zxEocYA" y="-10"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_ylXKYT7sEfGu4u7zxEocYA" fontName="Segoe UI"/>

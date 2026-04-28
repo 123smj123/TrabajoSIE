@@ -3,8 +3,9 @@
   "name" : "formularioActualizacionStock",
   "type" : "form",
   "uuid" : "1aca8c9d-6351-4cc1-92ad-5f0fa287b166",
-  "modelVersion" : "2.4",
-  "lastUpdate" : 1776965825886,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.4",
+  "lastUpdate" : 1777366156734,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
