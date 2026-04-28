@@ -13,12 +13,12 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_g4KFiULhEfGaTcVfzhmrtw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_g4KFikLhEfGaTcVfzhmrtw" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_F7Zw4ELxEfGaTcVfzhmrtw">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_F7Zw4ULxEfGaTcVfzhmrtw" name="nombreCliente" content="nombreCliente" type="TYPE_VARIABLE">
-              <referencedElements xmi:type="process:Data" xmi:id="_Y94iUEL8EfGaTcVfzhmrtw" name="nombreCliente" dataType="_g4KFsULhEfGaTcVfzhmrtw"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_F7Zw4ULxEfGaTcVfzhmrtw" name="v_nombre" content="v_nombre" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_Y94iUEL8EfGaTcVfzhmrtw" name="v_nombre" dataType="_g4KFsULhEfGaTcVfzhmrtw"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_F7Zw4kLxEfGaTcVfzhmrtw" name="nombreCliente" content="nombreCliente" type="TYPE_CONTRACT_INPUT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_nbHo8ELxEfGaTcVfzhmrtw" name="nombreCliente">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_nbHo8ULxEfGaTcVfzhmrtw"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_F7Zw4kLxEfGaTcVfzhmrtw" name="newScript()" content="nombreCliente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_NWDLcEMbEfGWcftQaWiJQQ" name="nombreCliente">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_NWDLcUMbEfGWcftQaWiJQQ"/>
               </referencedElements>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_F7Zw40LxEfGaTcVfzhmrtw" type="ASSIGNMENT"/>
@@ -27,20 +27,20 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_IwOB4ULxEfGaTcVfzhmrtw" name="v_importe" content="v_importe" type="TYPE_VARIABLE" returnType="java.lang.Double">
               <referencedElements xmi:type="process:Data" xmi:id="_Jg2NkELxEfGaTcVfzhmrtw" name="v_importe" dataType="_g4KFsELhEfGaTcVfzhmrtw"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_IwOB4kLxEfGaTcVfzhmrtw" name="importePresupuesto" content="importePresupuesto" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Double">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_rUZxMEL9EfGaTcVfzhmrtw" name="importePresupuesto" type="DECIMAL">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_rUZxMUL9EfGaTcVfzhmrtw"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_IwOB4kLxEfGaTcVfzhmrtw" name="newScript()" content="importePresupuesto" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Double">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_ZKDlAEMbEfGWcftQaWiJQQ" name="importePresupuesto" type="DECIMAL">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_ZKDlAUMbEfGWcftQaWiJQQ"/>
               </referencedElements>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_IwOB40LxEfGaTcVfzhmrtw" type="ASSIGNMENT"/>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_Kp0n0ELxEfGaTcVfzhmrtw">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Kp0n0ULxEfGaTcVfzhmrtw" name="descripcionMueble" content="descripcionMueble" type="TYPE_VARIABLE">
-              <referencedElements xmi:type="process:Data" xmi:id="_K_9P4ELxEfGaTcVfzhmrtw" name="descripcionMueble" dataType="_g4KFsULhEfGaTcVfzhmrtw"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Kp0n0ULxEfGaTcVfzhmrtw" name="v_mueble" content="v_mueble" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_K_9P4ELxEfGaTcVfzhmrtw" name="v_mueble" dataType="_g4KFsULhEfGaTcVfzhmrtw"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_Kp0n0kLxEfGaTcVfzhmrtw" name="descripcionMueble" content="descripcionMueble" type="TYPE_CONTRACT_INPUT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_oQBQoELxEfGaTcVfzhmrtw" name="descripcionMueble">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_oQBQoULxEfGaTcVfzhmrtw"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7O9qQEMaEfGWcftQaWiJQQ" name="descripcionMueble">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_7O9qQUMaEfGWcftQaWiJQQ"/>
               </referencedElements>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_Kp0n00LxEfGaTcVfzhmrtw" type="ASSIGNMENT"/>
@@ -218,9 +218,9 @@
                 <expression xmi:type="expression:Expression" xmi:id="_VJas60LpEfGaTcVfzhmrtw" name="Presupuesto rechazado - Carpintería Hermanos Morillo" content="Presupuesto rechazado - Carpintería Hermanos Morillo" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_VJas7ELpEfGaTcVfzhmrtw" key="html">
-                <expression xmi:type="expression:Expression" xmi:id="_VJas7ULpEfGaTcVfzhmrtw" name="html()" content="&quot;Estimado/a &quot; + nombreCliente + &quot;, su presupuesto de &quot; + v_importe + &quot;€ ha sido RECHAZADO.&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                <expression xmi:type="expression:Expression" xmi:id="_VJas7ULpEfGaTcVfzhmrtw" name="html()" content="&quot;Estimado/a &quot; + v_nombre + &quot;, su presupuesto de &quot; + v_importe + &quot;€ ha sido RECHAZADO.&quot;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
                   <referencedElements xmi:type="process:Data" xmi:id="_VJas7kLpEfGaTcVfzhmrtw" name="v_importe" dataType="_g4KFsELhEfGaTcVfzhmrtw"/>
-                  <referencedElements xmi:type="process:Data" xmi:id="_VJas70LpEfGaTcVfzhmrtw" name="nombreCliente" dataType="_g4KFsULhEfGaTcVfzhmrtw"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_VJas70LpEfGaTcVfzhmrtw" name="v_nombre" dataType="_g4KFsULhEfGaTcVfzhmrtw"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_VJas8ELpEfGaTcVfzhmrtw" key="message">
@@ -252,10 +252,10 @@
           <stepSummary xmi:type="expression:Expression" xmi:id="_opuH40LiEfGaTcVfzhmrtw" name="" content="" returnTypeFixed="true"/>
         </elements>
       </elements>
-      <data xmi:type="process:Data" xmi:id="_yzJO8ELiEfGaTcVfzhmrtw" name="nombreCliente" dataType="_g4KFsULhEfGaTcVfzhmrtw">
+      <data xmi:type="process:Data" xmi:id="_yzJO8ELiEfGaTcVfzhmrtw" name="v_nombre" dataType="_g4KFsULhEfGaTcVfzhmrtw">
         <defaultValue xmi:type="expression:Expression" xmi:id="_yzJO8ULiEfGaTcVfzhmrtw" content=""/>
       </data>
-      <data xmi:type="process:Data" xmi:id="_1Jur0ELiEfGaTcVfzhmrtw" name="descripcionMueble" dataType="_g4KFsULhEfGaTcVfzhmrtw">
+      <data xmi:type="process:Data" xmi:id="_1Jur0ELiEfGaTcVfzhmrtw" name="v_mueble" dataType="_g4KFsULhEfGaTcVfzhmrtw">
         <defaultValue xmi:type="expression:Expression" xmi:id="_1Jur0ULiEfGaTcVfzhmrtw" content=""/>
       </data>
       <data xmi:type="process:Data" xmi:id="_4OGbwELiEfGaTcVfzhmrtw" name="v_importe" dataType="_g4KFsELhEfGaTcVfzhmrtw">
