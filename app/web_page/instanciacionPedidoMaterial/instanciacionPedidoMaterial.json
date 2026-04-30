@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "c5f07152-6f5e-4ca3-841a-e913c0c50ab0",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1777476567108,
+  "lastUpdate" : 1777542104220,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -13,7 +13,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "dd2c7995-63ec-4a9d-bdfd-39670df06c8f",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -219,7 +228,8 @@
                     "value" : "materialNombre"
                   },
                   "value" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : "pedidoMaterial.materialNombre"
                   },
                   "debounce" : {
                     "type" : "constant",
@@ -304,7 +314,8 @@
                     "value" : "cantidad"
                   },
                   "value" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : "pedidoMaterial.cantidad"
                   },
                   "debounce" : {
                     "type" : "constant",
@@ -316,7 +327,7 @@
                   },
                   "min" : {
                     "type" : "constant",
-                    "value" : 0
+                    "value" : 1
                   },
                   "max" : {
                     "type" : "constant"
@@ -390,7 +401,8 @@
                     "value" : "proveedor"
                   },
                   "value" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : "pedidoMaterial.proveedor"
                   },
                   "debounce" : {
                     "type" : "constant",
@@ -434,6 +446,10 @@
                     "type" : "constant",
                     "value" : false
                   },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
                   "required" : {
                     "type" : "constant",
                     "value" : false
@@ -442,63 +458,109 @@
                     "type" : "constant",
                     "value" : false
                   },
-                  "minLength" : {
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "¿Es urgente?"
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "pedidoMaterial.urgente"
+                  }
+                },
+                "reference" : "4ee9e055-f450-4fe8-be83-22981176bc34",
+                "hasValidationError" : false,
+                "id" : "pbCheckbox"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "maxLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "readOnly" : {
+                  "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "labelHidden" : {
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
                     "type" : "constant",
                     "value" : false
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "urgente"
+                    "value" : "Enviar solicitud"
                   },
-                  "labelPosition" : {
+                  "alignment" : {
                     "type" : "constant",
-                    "value" : "top"
+                    "value" : "left"
                   },
-                  "labelWidth" : {
+                  "buttonStyle" : {
                     "type" : "constant",
-                    "value" : 4
+                    "value" : "default"
                   },
-                  "placeholder" : {
-                    "type" : "interpolation",
-                    "value" : "urgente"
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Submit task"
                   },
-                  "value" : {
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
                     "type" : "variable"
                   },
-                  "debounce" : {
-                    "type" : "constant",
-                    "value" : 0
-                  },
-                  "type" : {
-                    "type" : "constant",
-                    "value" : "text"
-                  },
-                  "min" : {
+                  "dataToSend" : {
                     "type" : "constant"
                   },
-                  "max" : {
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "dataFromError" : {
+                    "type" : "variable"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant",
+                    "value" : "Last"
+                  },
+                  "valueToAdd" : {
                     "type" : "constant"
                   },
-                  "step" : {
-                    "type" : "constant",
-                    "value" : 1
+                  "removeItem" : {
+                    "type" : "variable"
                   }
                 },
-                "reference" : "3c29f444-9086-4fcc-b4a4-b40f980490c0",
+                "reference" : "640ddb20-afd3-464c-b5ae-c2babc65f277",
                 "hasValidationError" : false,
-                "id" : "pbInput"
+                "id" : "pbButton"
               }
             ]
           ]
@@ -535,6 +597,13 @@
         "return {",
         "",
         "}"
+      ],
+      "exposed" : false
+    },
+    "pedidoMaterial" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"find [com.company.model.PedidoMaterial]\",\"businessObjectName\":\"PedidoMaterial\",\"query\":{\"name\":\"find\",\"displayName\":\"find\"},\"id\":\"com.company.model.PedidoMaterial\",\"filters\":[],\"pagination\":{\"p\":\"0\",\"c\":\"10\"}}"
       ],
       "exposed" : false
     }
