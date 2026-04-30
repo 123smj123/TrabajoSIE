@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "667c4966-de66-42e0-89e7-250195608426",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1777544680312,
+  "lastUpdate" : 1777586981294,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -162,7 +162,78 @@
                   "hasValidationError" : false,
                   "id" : "pbContainer",
                   "rows" : [
-                    [ ]
+                    [
+                      {
+                        "type" : "component",
+                        "dimension" : {
+                          "xs" : 12,
+                          "sm" : 12,
+                          "md" : 12,
+                          "lg" : 12
+                        },
+                        "propertyValues" : {
+                          "cssClasses" : {
+                            "type" : "constant",
+                            "value" : ""
+                          },
+                          "hidden" : {
+                            "type" : "constant",
+                            "value" : false
+                          },
+                          "disabled" : {
+                            "type" : "constant",
+                            "value" : false
+                          },
+                          "required" : {
+                            "type" : "constant",
+                            "value" : false
+                          },
+                          "allowHTML" : {
+                            "type" : "constant",
+                            "value" : false
+                          },
+                          "labelHidden" : {
+                            "type" : "constant",
+                            "value" : false
+                          },
+                          "label" : {
+                            "type" : "interpolation",
+                            "value" : "Decisión:"
+                          },
+                          "labelPosition" : {
+                            "type" : "constant",
+                            "value" : "top"
+                          },
+                          "labelWidth" : {
+                            "type" : "constant",
+                            "value" : 4
+                          },
+                          "inline" : {
+                            "type" : "constant",
+                            "value" : false
+                          },
+                          "availableValues" : {
+                            "type" : "expression",
+                            "value" : "values"
+                          },
+                          "displayedKey" : {
+                            "type" : "constant",
+                            "value" : "label"
+                          },
+                          "returnedKey" : {
+                            "type" : "constant",
+                            "value" : "value"
+                          },
+                          "selectedValue" : {
+                            "type" : "variable",
+                            "value" : "formInput.presupuestoAprobado"
+                          }
+                        },
+                        "reference" : "aa12c89b-3158-45e3-9ed3-eb50765c5216",
+                        "hasValidationError" : false,
+                        "id" : "pbRadioButtons"
+                      }
+                    ]
                   ]
                 }
               }
@@ -332,7 +403,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "",
+        "    presupuestoAprobado: $data.formInput.presupuestoAprobado",
         "}"
       ],
       "exposed" : false
@@ -354,7 +425,17 @@
     "formInput" : {
       "type" : "json",
       "value" : [
-        "{\"resultadoRevision\": \"\"}"
+        "{\"presupuestoAprobado\": \"\"}"
+      ],
+      "exposed" : false
+    },
+    "values" : {
+      "type" : "json",
+      "value" : [
+        "[\r",
+        "  { \"label\": \"Aprobar\", \"value\": true },\r",
+        "  { \"label\": \"Rechazar\", \"value\": false }\r",
+        "]"
       ],
       "exposed" : false
     }

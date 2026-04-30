@@ -5,7 +5,7 @@
     <user userName="papaDeOnesimo">
       <firstName>Onésimo</firstName>
       <lastName>Morillo</lastName>
-      <manager>paquito</manager>
+      <manager>admin</manager>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -14,7 +14,7 @@
     <user userName="paquito">
       <firstName>Paquito</firstName>
       <lastName>Trabajador</lastName>
-      <manager>papaDeOnesimo</manager>
+      <manager></manager>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
