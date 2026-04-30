@@ -16,10 +16,10 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_Z7s38T83EfG8DOkJ27W95A" name="stockVar" content="stockVar" type="TYPE_VARIABLE" returnType="com.company.model.Stock">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_a-ubMD83EfG8DOkJ27W95A" name="stockVar" dataType="_Utq-9D81EfG8DOkJ27W95A" className="com.company.model.Stock"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Z7s38j83EfG8DOkJ27W95A" name="newScript()" content="def material = stockDAO.findByPersistenceId(materialId.toLong());&#xD;&#xA;def nuevoStock = material.cantidadActual - cantidadUtilizada;&#xD;&#xA;material.setCantidadActual(nuevoStock);&#xD;&#xA;return stockDAO.save(material);" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Stock">
-              <referencedElements xmi:type="expression:Expression" xmi:id="_cTAGgD83EfG8DOkJ27W95A" name="stockDAO" content="stockDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.StockDAO" returnTypeFixed="true"/>
-              <referencedElements xmi:type="process:Data" xmi:id="_cTAGgT83EfG8DOkJ27W95A" name="cantidadUtilizada" dataType="_Utq-7j81EfG8DOkJ27W95A"/>
-              <referencedElements xmi:type="process:Data" xmi:id="_cTAGgj83EfG8DOkJ27W95A" name="materialId" dataType="_Utq-7j81EfG8DOkJ27W95A"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Z7s38j83EfG8DOkJ27W95A" name="newScript()" content="def material = stockDAO.findByPersistenceId(materialId.toLong());&#xD;&#xA;def nuevoStock = material.cantidadActual - cantidadUtilizada;&#xD;&#xA;material.setCantidadActual(nuevoStock);&#xD;&#xA;return material;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Stock">
+              <referencedElements xmi:type="expression:Expression" xmi:id="_kVFW4ER3EfGfOoqOm8mOPg" name="stockDAO" content="stockDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.StockDAO" returnTypeFixed="true"/>
+              <referencedElements xmi:type="process:Data" xmi:id="_kVF98ER3EfGfOoqOm8mOPg" name="cantidadUtilizada" dataType="_Utq-7j81EfG8DOkJ27W95A"/>
+              <referencedElements xmi:type="process:Data" xmi:id="_kVF98UR3EfGfOoqOm8mOPg" name="materialId" dataType="_Utq-7j81EfG8DOkJ27W95A"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_Z7s38z83EfG8DOkJ27W95A" type="ASSIGNMENT"/>
           </operations>
@@ -90,20 +90,20 @@
                 <expression xmi:type="expression:Expression" xmi:id="_UgRUrT84EfG8DOkJ27W95A" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_UgRUrj84EfG8DOkJ27W95A" key="message">
-                <expression xmi:type="expression:Expression" xmi:id="_UgRUrz84EfG8DOkJ27W95A" name="&lt;pattern-expression>" content="&lt;p>&amp;lt;p&amp;gt;El stock de el material ${stockVar.nombre} est&amp;aacute; bajo,&lt;br />&#xA;solamente quedan ${stockVar.cantidadActual} unidades de las&lt;br />&#xA;${stockVar.cantidadMinima} unidades exigidas como m&amp;iacute;nimo.&amp;lt;/p&amp;gt;&lt;/p>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_UgRUsD84EfG8DOkJ27W95A" name="stockVar.nombre" content="stockVar.nombre" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_UgRUsT84EfG8DOkJ27W95A" name="stockVar" content="stockVar" type="TYPE_VARIABLE" returnType="com.company.model.Stock">
-                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_UgRUsj84EfG8DOkJ27W95A" name="stockVar" dataType="_Utq-9D81EfG8DOkJ27W95A" className="com.company.model.Stock"/>
+                <expression xmi:type="expression:Expression" xmi:id="_UgRUrz84EfG8DOkJ27W95A" name="&lt;pattern-expression>" content="&lt;p>El stock de el material ${stockVar.nombre} est&amp;aacute; bajo,&lt;br />&#xA;solamente quedan ${stockVar.cantidadActual} unidades de las&lt;br />&#xA;${stockVar.cantidadMinima} unidades exigidas como m&amp;iacute;nimo.&lt;/p>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_LubUwER4EfGfOoqOm8mOPg" name="stockVar.nombre" content="stockVar.nombre" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_LudxAER4EfGfOoqOm8mOPg" name="stockVar" content="stockVar" type="TYPE_VARIABLE" returnType="com.company.model.Stock">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_LudxAUR4EfGfOoqOm8mOPg" name="stockVar" dataType="_Utq-9D81EfG8DOkJ27W95A" className="com.company.model.Stock"/>
                     </referencedElements>
                   </referencedElements>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_UgRUsz84EfG8DOkJ27W95A" name="stockVar.cantidadActual" content="stockVar.cantidadActual" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_UgRUtD84EfG8DOkJ27W95A" name="stockVar" content="stockVar" type="TYPE_VARIABLE" returnType="com.company.model.Stock">
-                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_UgRUtT84EfG8DOkJ27W95A" name="stockVar" dataType="_Utq-9D81EfG8DOkJ27W95A" className="com.company.model.Stock"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_LujQkER4EfGfOoqOm8mOPg" name="stockVar.cantidadActual" content="stockVar.cantidadActual" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_LujQkUR4EfGfOoqOm8mOPg" name="stockVar" content="stockVar" type="TYPE_VARIABLE" returnType="com.company.model.Stock">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_LujQkkR4EfGfOoqOm8mOPg" name="stockVar" dataType="_Utq-9D81EfG8DOkJ27W95A" className="com.company.model.Stock"/>
                     </referencedElements>
                   </referencedElements>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_UgRUtj84EfG8DOkJ27W95A" name="stockVar.cantidadMinima" content="stockVar.cantidadMinima" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_UgRUtz84EfG8DOkJ27W95A" name="stockVar" content="stockVar" type="TYPE_VARIABLE" returnType="com.company.model.Stock">
-                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_UgRUuD84EfG8DOkJ27W95A" name="stockVar" dataType="_Utq-9D81EfG8DOkJ27W95A" className="com.company.model.Stock"/>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_LujQk0R4EfGfOoqOm8mOPg" name="stockVar.cantidadMinima" content="stockVar.cantidadMinima" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_LujQlER4EfGfOoqOm8mOPg" name="stockVar" content="stockVar" type="TYPE_VARIABLE" returnType="com.company.model.Stock">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_LujQlUR4EfGfOoqOm8mOPg" name="stockVar" dataType="_Utq-9D81EfG8DOkJ27W95A" className="com.company.model.Stock"/>
                     </referencedElements>
                   </referencedElements>
                 </expression>
