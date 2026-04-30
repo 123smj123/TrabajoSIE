@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "667c4966-de66-42e0-89e7-250195608426",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1777586981294,
+  "lastUpdate" : 1777588617087,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -425,7 +425,9 @@
     "formInput" : {
       "type" : "json",
       "value" : [
-        "{\"presupuestoAprobado\": \"\"}"
+        "{",
+        "    \"presupuestoAprobado\": null",
+        "}"
       ],
       "exposed" : false
     },

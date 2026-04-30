@@ -255,6 +255,17 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_6Nf30UR7EfGfOoqOm8mOPg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_6Nf30ER7EfGfOoqOm8mOPg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_6Nf30kR7EfGfOoqOm8mOPg" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_SJ0WUETlEfGYGqOtkjJ2qw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_SJ0WUUTlEfGYGqOtkjJ2qw" name="presupuestoAprobado" content="presupuestoAprobado" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_S6e-QETlEfGYGqOtkjJ2qw" name="presupuestoAprobado" dataType="_GN7ZbER7EfGfOoqOm8mOPg"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_SJ0WUkTlEfGYGqOtkjJ2qw" name="presupuestoAprobado" content="presupuestoAprobado" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_V38N4ETlEfGYGqOtkjJ2qw" name="presupuestoAprobado" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_V38N4UTlEfGYGqOtkjJ2qw"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_SJ0WU0TlEfGYGqOtkjJ2qw" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_6Nf300R7EfGfOoqOm8mOPg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_6Nf31ER7EfGfOoqOm8mOPg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_6Nf31UR7EfGfOoqOm8mOPg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -263,7 +274,11 @@
           <formMapping xmi:type="process:FormMapping" xmi:id="_9DqMoUR7EfGfOoqOm8mOPg">
             <targetForm xmi:type="expression:Expression" xmi:id="_Ha2_EER-EfGfOoqOm8mOPg" name="revisarPresupuesto" content="667c4966-de66-42e0-89e7-250195608426" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_9DqMoER7EfGfOoqOm8mOPg"/>
+          <contract xmi:type="process:Contract" xmi:id="_9DqMoER7EfGfOoqOm8mOPg">
+            <inputs xmi:type="process:ContractInput" xmi:id="_M5r5cETlEfGYGqOtkjJ2qw" name="presupuestoAprobado" type="BOOLEAN">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_M5r5cUTlEfGYGqOtkjJ2qw"/>
+            </inputs>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_9DqMo0R7EfGfOoqOm8mOPg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
       </elements>
