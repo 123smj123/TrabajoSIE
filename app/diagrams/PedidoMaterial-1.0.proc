@@ -104,7 +104,7 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_ZAox90PZEfGgFPVauPvfUg" target="_ZAnj0EPZEfGgFPVauPvfUg" source="_T_hBcEPZEfGgFPVauPvfUg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_ZAox-EPZEfGgFPVauPvfUg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_ZAox-UPZEfGgFPVauPvfUg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_ZAox-UPZEfGgFPVauPvfUg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_a3j3WEPZEfGgFPVauPvfUg" target="_a3j3UEPZEfGgFPVauPvfUg" source="_FPIWUEPZEfGgFPVauPvfUg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_a3j3WUPZEfGgFPVauPvfUg"/>
