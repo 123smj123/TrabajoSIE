@@ -1,10 +1,10 @@
 {
-  "id" : "FormCalcularPresupuesto",
-  "name" : "FormCalcularPresupuesto",
+  "id" : "formNuevoPresupuesto",
+  "name" : "formNuevoPresupuesto",
   "type" : "form",
   "uuid" : "51cd65f0-5f5a-4321-a79e-307eadfb7c89",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1777368752532,
+  "lastUpdate" : 1777543048650,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -181,7 +181,7 @@
           },
           "value" : {
             "type" : "variable",
-            "value" : "formOutput.nombreCliente"
+            "value" : "formOutput.v_nombre"
           },
           "debounce" : {
             "type" : "constant",
@@ -263,7 +263,7 @@
           },
           "value" : {
             "type" : "variable",
-            "value" : "formOutput.descripcionMueble"
+            "value" : "formOutput.v_mueble"
           }
         },
         "reference" : "08926e44-fe38-4283-bd29-60cdec6b46a3",
@@ -330,7 +330,7 @@
           },
           "value" : {
             "type" : "variable",
-            "value" : "formOutput.importePresupuesto"
+            "value" : "formOutput.v_importe"
           },
           "debounce" : {
             "type" : "constant",
@@ -341,7 +341,8 @@
             "value" : "number"
           },
           "min" : {
-            "type" : "constant"
+            "type" : "constant",
+            "value" : 0
           },
           "max" : {
             "type" : "constant"
@@ -389,7 +390,7 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "md" : 6,
+                  "md" : 12,
                   "sm" : 12,
                   "xs" : 12,
                   "lg" : 6
@@ -458,6 +459,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "7b2aa1d9-dda5-4e22-bd06-95c730c15b49",
@@ -524,13 +546,6 @@
     ]
   ],
   "variables" : {
-    "task" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/userTask/{{taskId}}"
-      ],
-      "exposed" : false
-    },
     "submit_errors_list" : {
       "type" : "expression",
       "value" : [
@@ -552,20 +567,6 @@
         "return {",
         "",
         "}"
-      ],
-      "exposed" : false
-    },
-    "context" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/userTask/{{taskId}}/context"
-      ],
-      "exposed" : false
-    },
-    "taskId" : {
-      "type" : "urlparameter",
-      "value" : [
-        "id"
       ],
       "exposed" : false
     }
