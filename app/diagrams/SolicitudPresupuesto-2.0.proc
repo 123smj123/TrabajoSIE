@@ -25,7 +25,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_vYzmMER7EfGfOoqOm8mOPg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_vYy_J0R7EfGfOoqOm8mOPg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:XORGateway" xmi:id="_AiwwwER8EfGfOoqOm8mOPg" name="Importe >1000" outgoing="_vY0NQER7EfGfOoqOm8mOPg _6NhF8ER7EfGfOoqOm8mOPg" incoming="_q8QiYER7EfGfOoqOm8mOPg">
+        <elements xmi:type="process:XORGateway" xmi:id="_AiwwwER8EfGfOoqOm8mOPg" name="Importe &lt;1000" outgoing="_vY0NQER7EfGfOoqOm8mOPg _6NhF8ER7EfGfOoqOm8mOPg" incoming="_q8QiYER7EfGfOoqOm8mOPg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_q8M4AUR7EfGfOoqOm8mOPg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_q8M4AER7EfGfOoqOm8mOPg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_q8M4AkR7EfGfOoqOm8mOPg" name="" content="" returnTypeFixed="true"/>
